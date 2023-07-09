@@ -1256,6 +1256,10 @@ video {
   width: 100%;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1303,12 +1307,12 @@ video {
   background-color: rgb(240 249 255 / var(--tw-bg-opacity));
 }
 
-.p-8 {
-  padding: 2rem;
-}
-
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .text-center {
@@ -1347,6 +1351,38 @@ video {
   font-weight: 700;
 }
 
+.marker\:text-cyan-900 *::marker {
+  color: rgb(22 78 99 );
+}
+
+.marker\:text-pink-600 *::marker {
+  color: rgb(219 39 119 );
+}
+
+.marker\:text-pink-900 *::marker {
+  color: rgb(131 24 67 );
+}
+
+.marker\:text-lime-600 *::marker {
+  color: rgb(101 163 13 );
+}
+
+.marker\:text-cyan-900::marker {
+  color: rgb(22 78 99 );
+}
+
+.marker\:text-pink-600::marker {
+  color: rgb(219 39 119 );
+}
+
+.marker\:text-pink-900::marker {
+  color: rgb(131 24 67 );
+}
+
+.marker\:text-lime-600::marker {
+  color: rgb(101 163 13 );
+}
+
 .prose-headings\:text-cyan-900 :is(:where(h1, h2, h3, h4, h5, h6, th):not(:where([class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: rgb(22 78 99 / var(--tw-text-opacity));
@@ -1358,6 +1394,10 @@ video {
 
 .prose-h1\:underline-offset-8 :is(:where(h1):not(:where([class~="not-prose"] *))) {
   text-underline-offset: 8px;
+}
+
+.prose-h1\:underline-offset-auto :is(:where(h1):not(:where([class~="not-prose"] *))) {
+  text-underline-offset: auto;
 }
 
 .prose-h2\:first-letter\:text-cyan-600 :is(:where(h2):not(:where([class~="not-prose"] *)))::first-letter {
@@ -1372,10 +1412,6 @@ video {
 .prose-blockquote\:mx-6 :is(:where(blockquote):not(:where([class~="not-prose"] *))) {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
-
-.prose-blockquote\:border :is(:where(blockquote):not(:where([class~="not-prose"] *))) {
-  border-width: 1px;
 }
 
 .prose-blockquote\:border-cyan-600 :is(:where(blockquote):not(:where([class~="not-prose"] *))) {
@@ -1397,40 +1433,12 @@ video {
   text-align: center;
 }
 
-.prose-ul\:marker\:text-cyan-600 *::marker :is(:where(ul):not(:where([class~="not-prose"] *))) {
-  color: rgb(8 145 178 );
-}
-
-.prose-ul\:marker\:text-cyan-600::marker :is(:where(ul):not(:where([class~="not-prose"] *))) {
-  color: rgb(8 145 178 );
-}
-
 .prose-li\:marker\:text-cyan-600 *::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
   color: rgb(8 145 178 );
 }
 
-.prose-li\:marker\:text-blue-600 *::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
-  color: rgb(37 99 235 );
-}
-
-.prose-li\:marker\:text-red-700 *::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
-  color: rgb(185 28 28 );
-}
-
 .prose-li\:marker\:text-cyan-600::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
   color: rgb(8 145 178 );
-}
-
-.prose-li\:marker\:text-blue-600::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
-  color: rgb(37 99 235 );
-}
-
-.prose-li\:marker\:text-red-700::marker :is(:where(li):not(:where([class~="not-prose"] *))) {
-  color: rgb(185 28 28 );
-}
-
-.prose-img\:rounded :is(:where(img):not(:where([class~="not-prose"] *))) {
-  border-radius: 0.25rem;
 }
 
 .prose-img\:rounded-lg :is(:where(img):not(:where([class~="not-prose"] *))) {
